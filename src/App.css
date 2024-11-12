@@ -1,0 +1,37 @@
+:root {
+  --primary-color: #1e3799;
+  --secondary-color: #4a69bd;
+  --accent-color: #6a89cc;
+  --background-color: #f5f6fa;
+  --text-color: #2f3640;
+  --error-color: #e74c3c;
+  --success-color: #2ecc71;
+}
+
+/* ... resto de tus estilos ... */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--background-color);
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.9)
+  ), url('./assets/background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+}

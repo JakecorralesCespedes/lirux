@@ -1,0 +1,123 @@
+.header {
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.header-text {
+  flex: 1;
+}
+
+.header-text h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.header-text p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 0;
+  margin-top: 0.2rem;
+}
+
+/* Estilos para la navegación si la necesitas */
+.header-nav {
+  display: none; /* Oculto por defecto */
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.header-nav a:hover {
+  opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.8rem 0;
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .header-text h1 {
+    font-size: 1.2rem;
+  }
+
+  .header-text p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Animación opcional para el header al hacer scroll */
+@media (min-width: 769px) {
+  .header.scrolled {
+    padding: 0.5rem;
+    background: rgba(30, 55, 153, 0.95);
+    backdrop-filter: blur(5px);
+  }
+
+  .header.scrolled .logo {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Efecto de gradiente opcional */
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    var(--accent-color),
+    var(--secondary-color),
+    var(--primary-color)
+  );
+} 

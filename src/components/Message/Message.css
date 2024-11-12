@@ -1,0 +1,75 @@
+.message {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+  animation: fadeIn 0.3s ease-in;
+  position: relative;
+  line-height: 1.5;
+}
+
+.user-message {
+  background: var(--primary-color);
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+.bot-message {
+  background: var(--background-color);
+  color: var(--text-color);
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+}
+
+/* Animación de entrada para los mensajes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo para links dentro de los mensajes */
+.message a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* Estilo para código o texto preformateado */
+.message pre {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .message {
+    max-width: 90%;
+    padding: 0.8rem;
+  }
+}
+
+/* Estilos opcionales para indicador de tiempo */
+.message .timestamp {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin-top: 0.3rem;
+  text-align: right;
+}
+
+/* Estilos para estados de mensaje */
+.message.sending {
+  opacity: 0.7;
+}
+
+.message.error {
+  border: 1px solid var(--error-color);
+} 
